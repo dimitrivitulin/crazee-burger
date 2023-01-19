@@ -1,15 +1,16 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 
 export default function LoginForm() {
   // State
-  const [prenom, setPrenom] = useState("")
+  const [prenom, setPrenom] = useState("");
 
   // Comportement
   const handleSubmit = (event) => {
-    event.preventDefault()
-    alert(`Bonjour ${prenom}`)
-    setPrenom("")
-  }
+    event.preventDefault();
+    alert(`Bonjour ${prenom}`);
+
+    setPrenom("");
+  };
 
   // Affichage
   return (
@@ -26,5 +27,5 @@ export default function LoginForm() {
       />
       <button>Accédez à votre espace</button>
     </form>
-  )
+  );
 }
