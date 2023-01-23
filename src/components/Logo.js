@@ -17,12 +17,14 @@ export default function Logo() {
 }
 
 const LogoWrapper = styled.div`
+  position: relative;
+  z-index: 2;
   font-family: "Amatic SC", cursive;
   font-weight: 700;
 `
 const LogoTitle = styled.div`
   color: ${theme.colors.primary_burger};
-  height: 10vh;
+  height: 18vh;
   display: flex;
   justify-content: center;
   align-items: center;
