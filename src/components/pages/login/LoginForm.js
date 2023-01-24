@@ -29,7 +29,7 @@ export default function LoginForm() {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             type="text"
-            placeholder="Entrez votre prénom..."
+            placeholder="Entrez votre prénom"
             required
           />
         </div>
@@ -46,41 +46,40 @@ const LoginFormWrapper = styled.form`
   z-index: 2;
   width: 100%;
   min-height: 60vh;
-  padding-top: 8vh;
+  padding-top: ${theme.spacing.lg};
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  border: 1px solid red;
   color: white;
   font-family: "Amatic SC", cursive;
   .form-box {
-    width: 20vw;
+    width: 25vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 1rem;
+    gap: ${theme.spacing.md};
     h1 {
       padding: 1.5rem;
       display: block;
       width: 100%;
-      border-bottom: 2px solid ${theme.colors.redSecondary};
+      border-bottom: 2px solid ${theme.colors.primary};
       text-align: center;
       font-size: ${theme.fonts.P4};
     }
     h2 {
-      margin-top: 2rem;
-      padding: 0.5rem;
+      padding: ${theme.spacing.xxs};
+      font-size: ${theme.fonts.P3};
     }
     .input-box {
       width: 100%;
       display: flex;
       justify-content: center;
-      gap: 0.8rem;
-      padding: 1rem 1.3rem;
+      gap: ${theme.spacing.xs};
+      padding: ${theme.spacing.md};
       background-color: ${theme.colors.white};
-      border-radius: 0.2rem;
+      border-radius: ${theme.borderRadius.round};
       svg {
         color: ${theme.colors.greyLight};
         height: 100%;
@@ -88,29 +87,30 @@ const LoginFormWrapper = styled.form`
       input {
         width: 100%;
         border: none;
-        border-radius: 0.2rem;
+        border-radius: ${theme.borderRadius.round};
         background-color: ${theme.colors.white};
         font-family: "Open Sans", sans-serif;
       }
     }
     button {
       width: 100%;
-      padding: 1rem;
+      padding: ${theme.spacing.md};
       border: none;
-      border-radius: 0.2rem;
-      background-color: ${theme.colors.primary_burger};
+      border-radius: ${theme.borderRadius.round};
+      background-color: ${theme.colors.primary};
       color: ${theme.colors.white};
       font-family: "Open Sans", sans-serif;
       display: flex;
       justify-content: center;
       line-height: 1rem;
-      font-weight: 600;
+      font-weight: ${theme.weights.medium};
+
       letter-spacing: 1px;
       &:focus,
       &:hover {
-        color: ${theme.colors.primary_burger};
+        color: ${theme.colors.primary};
         background-color: ${theme.colors.white};
-        outline: 1px solid ${theme.colors.primary_burger};
+        outline: 1px solid ${theme.colors.primary};
       }
       svg {
         height: 100%;

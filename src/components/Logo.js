@@ -24,18 +24,18 @@ const LogoWrapper = styled.div`
 `
 const LogoTitle = styled.div`
   color: ${theme.colors.primary_burger};
-  height: 18vh;
+  height: 25vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.75rem;
+  gap: ${theme.spacing.sm}; ;
 `
-const LogoText = styled.h2`
+const LogoText = styled.h1`
   line-height: 0;
-  font-size: 9vh;
+  font-size: ${theme.fonts.P6};
 `
 const ImgLogoWrapper = styled.span`
-  height: 100%;
+  height: 80%;
 `
 const ImgLogo = styled.img`
   height: 100%;

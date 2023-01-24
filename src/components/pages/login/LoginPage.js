@@ -2,6 +2,7 @@ import styled from "styled-components"
 import Logo from "../../Logo"
 import LoginForm from "./LoginForm"
 import burgerBackground from "./../../../assets/images/F03-burger-background.jpg"
+import { theme } from "../../../theme"
 
 export default function LoginPage() {
   // Affichage
@@ -15,13 +16,13 @@ export default function LoginPage() {
 
 const LoginPageWrapper = styled.div`
   height: 100vh;
-  border: 1px solid orange;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   position: relative;
+  background-color: ${theme.colors.dark};
   &:before {
     content: "";
     display: block;
