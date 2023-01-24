@@ -24,19 +24,20 @@ const LogoWrapper = styled.div`
 `
 const LogoTitle = styled.div`
   color: ${theme.colors.primary_burger};
-  height: 25vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: ${theme.spacing.sm}; ;
+  gap: ${theme.spacing.sm};
+  transform: scale(2.5);
+  padding: ${theme.spacing.md};
 `
 const LogoText = styled.h1`
   line-height: 0;
-  font-size: ${theme.fonts.P6};
+  font-size: ${theme.fonts.P4};
 `
 const ImgLogoWrapper = styled.span`
-  height: 80%;
+  width: 100px;
 `
 const ImgLogo = styled.img`
-  height: 100%;
+  width: 100%;
 `

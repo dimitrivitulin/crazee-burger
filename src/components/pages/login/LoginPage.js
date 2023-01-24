@@ -22,7 +22,6 @@ const LoginPageWrapper = styled.div`
   justify-content: center;
   overflow: hidden;
   position: relative;
-  background-color: ${theme.colors.dark};
   &:before {
     content: "";
     display: block;
@@ -31,10 +30,10 @@ const LoginPageWrapper = styled.div`
     top: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.8;
-    background-image: url(${burgerBackground});
+    background: url(${burgerBackground}), ${theme.colors.greySemiDark};
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-blend-mode: darken;
   }
 `

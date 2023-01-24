@@ -22,6 +22,7 @@ export default function LoginForm() {
     <LoginFormWrapper onSubmit={handleSubmit}>
       <div className="form-box">
         <h1>Bienvenue chez nous !</h1>
+        <hr />
         <h2>Connectez-vous</h2>
         <div className="input-box">
           <BsPersonCircle />
@@ -64,13 +65,17 @@ const LoginFormWrapper = styled.form`
       padding: 1.5rem;
       display: block;
       width: 100%;
-      border-bottom: 2px solid ${theme.colors.primary};
       text-align: center;
       font-size: ${theme.fonts.P4};
     }
+    hr {
+      width: 100%;
+      border: 1px solid ${theme.colors.primary};
+    }
     h2 {
       padding: ${theme.spacing.xxs};
-      font-size: ${theme.fonts.P3};
+      font-size: ${theme.fonts.P4};
+      font-weight: ${theme.weights.light};
     }
     .input-box {
       width: 100%;
