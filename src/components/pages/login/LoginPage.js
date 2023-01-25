@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import Logo from "../../Logo"
 import LoginForm from "./LoginForm"
+import Logo from "./../../reusable-ui/Logo"
 import burgerBackground from "./../../../assets/images/F03-burger-background.jpg"
 import { theme } from "../../../theme"
 

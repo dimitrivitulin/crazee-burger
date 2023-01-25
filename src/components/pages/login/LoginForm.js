@@ -4,6 +4,7 @@ import styled from "styled-components"
 import { theme } from "../../../theme"
 import { BsPersonCircle } from "react-icons/bs"
 import { MdOutlineKeyboardArrowRight } from "react-icons/md"
+import TextInput from "../../reusable-ui/TextInput"
 
 export default function LoginForm() {
   // State
@@ -24,16 +25,13 @@ export default function LoginForm() {
         <h1>Bienvenue chez nous !</h1>
         <hr />
         <h2>Connectez-vous</h2>
-        <div className="input-box">
-          <BsPersonCircle />
-          <input
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-            type="text"
-            placeholder="Entrez votre prénom"
-            required
-          />
-        </div>
+        <TextInput
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+          Icon={<BsPersonCircle />}
+          placeholder={"Entrez votre prénom"}
+          required
+        />
         <button type="submit">
           Accédez à mon espace <MdOutlineKeyboardArrowRight />
         </button>
@@ -77,26 +75,7 @@ const LoginFormWrapper = styled.form`
       font-size: ${theme.fonts.P4};
       font-weight: ${theme.weights.light};
     }
-    .input-box {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      gap: ${theme.spacing.xs};
-      padding: ${theme.spacing.md};
-      background-color: ${theme.colors.white};
-      border-radius: ${theme.borderRadius.round};
-      svg {
-        color: ${theme.colors.greyLight};
-        height: 100%;
-      }
-      input {
-        width: 100%;
-        border: none;
-        border-radius: ${theme.borderRadius.round};
-        background-color: ${theme.colors.white};
-        font-family: "Open Sans", sans-serif;
-      }
-    }
+
     button {
       width: 100%;
       padding: ${theme.spacing.md};
