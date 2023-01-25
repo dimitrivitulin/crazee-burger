@@ -5,6 +5,7 @@ import { theme } from "../../../theme"
 import { BsPersonCircle } from "react-icons/bs"
 import { MdOutlineKeyboardArrowRight } from "react-icons/md"
 import TextInput from "../../reusable-ui/TextInput"
+import PrimaryButton from "../../reusable-ui/PrimaryButton"
 
 export default function LoginForm() {
   // State
@@ -32,9 +33,10 @@ export default function LoginForm() {
           placeholder={"Entrez votre prénom"}
           required
         />
-        <button type="submit">
-          Accédez à mon espace <MdOutlineKeyboardArrowRight />
-        </button>
+        <PrimaryButton
+          label={"Accédez à mon espace"}
+          Icon={<MdOutlineKeyboardArrowRight />}
+        />
       </div>
     </LoginFormWrapper>
   )
