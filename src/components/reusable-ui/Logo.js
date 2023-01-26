@@ -4,15 +4,15 @@ import logo from "./../../assets/images/F03-logo-orange.png"
 
 export default function Logo() {
   return (
-    <LogoWrapper>
+    <LogoStyled>
       <h1>crazee</h1>
       <img src={logo} alt="logo-crazee-burger" />
       <h1>burger</h1>
-    </LogoWrapper>
+    </LogoStyled>
   )
 }
 
-const LogoWrapper = styled.div`
+const LogoStyled = styled.div`
   display: flex;
   align-items: center;
   transform: scale(2.5);

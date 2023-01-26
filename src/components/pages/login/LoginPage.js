@@ -6,14 +6,14 @@ import burgerBackground from "./../../../assets/images/F03-burger-background.jpg
 export default function LoginPage() {
   // Affichage
   return (
-    <LoginPageWrapper>
+    <LoginPageStyled>
       <Logo />
       <LoginForm />
-    </LoginPageWrapper>
+    </LoginPageStyled>
   )
 }
 
-const LoginPageWrapper = styled.div`
+const LoginPageStyled = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
