@@ -3,7 +3,7 @@ import { theme } from "../../theme"
 
 export default function PrimaryButton({ label, Icon }) {
   return (
-    <PrimaryButtonStyled type="submit">
+    <PrimaryButtonStyled>
       <span>{label}</span>
       {Icon && Icon}
     </PrimaryButtonStyled>

@@ -21,7 +21,7 @@ export default function LoginForm() {
 
   // Affichage
   return (
-    <LoginFormWrapper onSubmit={handleSubmit}>
+    <LoginFormStyled onSubmit={handleSubmit}>
       <h1>Bienvenue chez nous !</h1>
       <hr />
       <h2>Connectez-vous</h2>
@@ -36,11 +36,11 @@ export default function LoginForm() {
         label={"Accéder à mon espace"}
         Icon={<IoChevronForward className="icon" />}
       />
-    </LoginFormWrapper>
+    </LoginFormStyled>
   )
 }
 
-const LoginFormWrapper = styled.form`
+const LoginFormStyled = styled.form`
   text-align: center;
   max-width: 500px;
   min-width: 400px;
