@@ -2,7 +2,6 @@ import styled from "styled-components"
 import LoginForm from "./LoginForm"
 import Logo from "./../../reusable-ui/Logo"
 import burgerBackground from "./../../../assets/images/F03-burger-background.jpg"
-import { theme } from "../../../theme"
 
 export default function LoginPage() {
   // Affichage
@@ -29,10 +28,9 @@ const LoginPageWrapper = styled.div`
     right: 0;
     bottom: 0;
     z-index: -1;
-    background: url(${burgerBackground}), ${theme.colors.greySemiDark};
+    background: url(${burgerBackground}), rgba(0, 0, 0, 0.7);
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
     background-blend-mode: darken;
   }
 `

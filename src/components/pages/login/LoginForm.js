@@ -51,7 +51,7 @@ const LoginFormWrapper = styled.form`
 
   h1 {
     font-size: ${theme.fonts.P5};
-    line-height: 3em;
+    margin: 30px 50px;
   }
   hr {
     width: 100%;
