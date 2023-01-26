@@ -20,16 +20,15 @@ const LoginPageWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  position: relative;
+
   &:before {
     content: "";
-    display: block;
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
     background: url(${burgerBackground}), ${theme.colors.greySemiDark};
     background-position: center;
     background-size: cover;
