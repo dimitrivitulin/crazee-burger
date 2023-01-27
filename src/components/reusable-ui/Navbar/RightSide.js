@@ -1,18 +1,51 @@
 import { Link, useParams } from "react-router-dom"
 import styled from "styled-components"
+import { BsPersonCircle } from "react-icons/bs"
+import { theme } from "../../../theme"
 
 export default function RightSide() {
   const { username } = useParams()
   return (
     <RightSideStyled>
-      <h1>Bonjour {username}</h1>
-      <Link to="/">
-        <button>Déconnexion</button>
-      </Link>
+      <div className="left-right-side">
+        <p>
+          Hey, <span>{username}</span>
+        </p>
+        <Link to="/" className="disconnect">
+          Se déconnecter
+        </Link>
+      </div>
+      <div className="right-right-side">
+        <BsPersonCircle className="icon" />
+      </div>
     </RightSideStyled>
   )
 }
 
 const RightSideStyled = styled.div`
-  background: lightcoral;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  .left-right-side {
+    p {
+      font-family: "Open Sans";
+      color: ${theme.colors.greyBlue};
+      font-size: ${theme.fonts.P0};
+      line-height: 22px;
+      span {
+        color: #ffa01b;
+        font-weight: ${theme.weights.bold};
+      }
+    }
+    .disconnect {
+      color: ${theme.colors.greyBlue};
+      font-size: ${theme.fonts.XXS};
+    }
+  }
+  .right-right-side {
+    .icon {
+      font-size: ${theme.fonts.P4};
+      color: ${theme.colors.greyBlue};
+    }
+  }
 `
