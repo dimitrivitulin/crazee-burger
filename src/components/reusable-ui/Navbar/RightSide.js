@@ -24,7 +24,7 @@ export default function RightSide() {
 
 const RightSideStyled = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 10px;
   .left-right-side {
     p {
@@ -32,6 +32,7 @@ const RightSideStyled = styled.div`
       color: ${theme.colors.greyBlue};
       font-size: ${theme.fonts.P0};
       line-height: 22px;
+      text-align: end;
       span {
         color: #ffa01b;
         font-weight: ${theme.weights.bold};
@@ -40,6 +41,7 @@ const RightSideStyled = styled.div`
     .disconnect {
       color: ${theme.colors.greyBlue};
       font-size: ${theme.fonts.XXS};
+      line-height: 14px;
     }
   }
   .right-right-side {

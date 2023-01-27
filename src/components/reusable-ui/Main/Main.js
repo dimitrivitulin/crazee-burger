@@ -1,7 +1,8 @@
 import styled from "styled-components"
+import { theme } from "../../../theme"
 
 export default function Main() {
-  return <MainStyled>Main</MainStyled>
+  return <MainStyled></MainStyled>
 }
 
 const MainStyled = styled.div`
@@ -10,5 +11,6 @@ const MainStyled = styled.div`
   width: 100%;
   max-width: 1400px;
   box-shadow: inset 0px 8px 20px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 15px 15px;
+  border-radius: 0px 0px ${theme.borderRadius.extraRound}
+    ${theme.borderRadius.extraRound};
 `
