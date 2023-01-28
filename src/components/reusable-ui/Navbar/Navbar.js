@@ -13,8 +13,7 @@ export default function Navbar() {
 
 const NavbarStyled = styled.div`
   width: 100%;
-  height: 100px;
-  max-width: 1400px;
+  height: 10vh;
   background: #ffffff;
   border-radius: 15px 15px 0px 0px;
   padding: 0px 70px 0px 20px;

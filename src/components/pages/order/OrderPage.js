@@ -5,8 +5,10 @@ import Navbar from "../../reusable-ui/Navbar/Navbar"
 export default function OrderPage() {
   return (
     <OrderPageStyled>
-      <Navbar />
-      <Main />
+      <div className="container">
+        <Navbar />
+        <Main />
+      </div>
     </OrderPageStyled>
   )
 }
@@ -19,4 +21,10 @@ const OrderPageStyled = styled.div`
   align-items: center;
   justify-content: flex-start;
   padding: 25px 0;
+  .container {
+    width: 1400px;
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+  }
 `
