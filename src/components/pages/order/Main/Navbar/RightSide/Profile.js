@@ -1,12 +1,11 @@
-import { Link, useParams } from "react-router-dom"
 import styled from "styled-components"
+import { theme } from "../../../../../../theme"
 import { BsPersonCircle } from "react-icons/bs"
-import { theme } from "../../../../../theme"
+import { Link } from "react-router-dom"
 
-export default function RightSide() {
-  const { username } = useParams()
+export default function Profile({ username }) {
   return (
-    <RightSideStyled>
+    <ProfileStyled>
       <div className="left-right-side">
         <p>
           Hey, <span>{username}</span>
@@ -18,11 +17,11 @@ export default function RightSide() {
       <div className="right-right-side">
         <BsPersonCircle className="icon" />
       </div>
-    </RightSideStyled>
+    </ProfileStyled>
   )
 }
 
-const RightSideStyled = styled.div`
+const ProfileStyled = styled.div`
   display: flex;
   align-items: flex-end;
   gap: 10px;

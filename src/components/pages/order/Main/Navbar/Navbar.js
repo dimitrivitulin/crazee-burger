@@ -1,12 +1,12 @@
 import styled from "styled-components"
 import LeftSide from "./LeftSide"
-import RightSide from "./RightSide"
+import RightSide from "./RightSide/RightSide"
 
-export default function Navbar() {
+export default function Navbar({ username }) {
   return (
     <NavbarStyled>
       <LeftSide />
-      <RightSide />
+      <RightSide username={username} />
     </NavbarStyled>
   )
 }
