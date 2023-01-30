@@ -1,11 +1,11 @@
 import styled from "styled-components"
-import LeftSide from "./LeftSide"
+import Logo from "../../../../reusable-ui/Logo"
 import RightSide from "./RightSide/RightSide"
 
 export default function Navbar({ username }) {
   return (
     <NavbarStyled>
-      <LeftSide />
+      <Logo />
       <RightSide username={username} />
     </NavbarStyled>
   )
