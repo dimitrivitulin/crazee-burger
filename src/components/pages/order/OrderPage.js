@@ -25,7 +25,8 @@ const OrderPageStyled = styled.div`
   justify-content: flex-start;
   padding: 25px 0;
   .container {
-    width: 1400px;
+    max-width: 1400px;
+    width: 80%;
     display: flex;
     flex-direction: column;
     height: 95vh;
