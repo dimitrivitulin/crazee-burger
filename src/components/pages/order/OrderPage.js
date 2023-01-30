@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import Main from "../../reusable-ui/Main/Main"
-import Navbar from "../../reusable-ui/Navbar/Navbar"
+import Main from "./Main/Main"
+import Navbar from "./Main/Navbar/Navbar"
 
 export default function OrderPage() {
   return (
