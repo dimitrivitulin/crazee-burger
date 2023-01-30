@@ -18,8 +18,5 @@ const LeftSideStyled = styled.div`
   justify-content: center;
   a {
     text-decoration: none;
-    div {
-      transform: none;
-    }
   }
 `
