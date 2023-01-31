@@ -29,6 +29,7 @@ const TextInputStyled = styled.div`
     border-radius: ${theme.borderRadius.round};
     background-color: ${theme.colors.white};
     font-family: "Open Sans", sans-serif;
+    padding-left: 10px;
     &::placeholder {
       background: ${theme.colors.white};
       color: ${theme.colors.greyMedium};

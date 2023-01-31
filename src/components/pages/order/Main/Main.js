@@ -6,7 +6,7 @@ export default function Main() {
 }
 
 const MainStyled = styled.div`
-  background: #f5f5f7;
+  background: ${theme.colors.background_white};
   height: 100%;
   width: 100%;
   box-shadow: inset 0px 8px 20px 8px rgba(0, 0, 0, 0.2);

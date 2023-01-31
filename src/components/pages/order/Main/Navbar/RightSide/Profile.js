@@ -33,7 +33,7 @@ const ProfileStyled = styled.div`
       line-height: 22px;
       text-align: end;
       span {
-        color: #ffa01b;
+        color: ${theme.colors.primary};
         font-weight: ${theme.weights.bold};
       }
     }
@@ -41,6 +41,10 @@ const ProfileStyled = styled.div`
       color: ${theme.colors.greyBlue};
       font-size: ${theme.fonts.XXS};
       line-height: 14px;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
   .right-right-side {
