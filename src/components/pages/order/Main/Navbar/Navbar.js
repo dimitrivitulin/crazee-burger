@@ -7,7 +7,7 @@ import RightSide from "./RightSide/RightSide"
 export default function Navbar({ username }) {
   return (
     <NavbarStyled>
-      <Logo onClick={refreshPage} />
+      <Logo onClick={refreshPage} className={"clicable"} />
       <RightSide username={username} />
     </NavbarStyled>
   )
@@ -22,4 +22,7 @@ const NavbarStyled = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  .clicable {
+    cursor: pointer;
+  }
 `

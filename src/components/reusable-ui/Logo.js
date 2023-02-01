@@ -15,7 +15,6 @@ export default function Logo({ className, onClick }) {
 const LogoStyled = styled.div`
   display: flex;
   align-items: center;
-  cursor: pointer;
   h1 {
     display: inline;
     line-height: 1em;
