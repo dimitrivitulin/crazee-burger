@@ -1,12 +1,11 @@
 import styled from "styled-components"
 import { theme } from "../../theme"
-import logo from "./../../assets/images/F03-logo-orange.png"
 
 export default function Logo({ className, onClick }) {
   return (
     <LogoStyled className={className} onClick={onClick}>
       <h1>crazee</h1>
-      <img src={logo} alt="logo-crazee-burger" />
+      <img src="./images/F03-logo-orange.png" alt="logo-crazee-burger" />
       <h1>burger</h1>
     </LogoStyled>
   )
