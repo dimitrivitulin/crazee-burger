@@ -17,4 +17,6 @@ const MainStyled = styled.div`
   box-shadow: inset 0px 8px 20px 8px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px ${theme.borderRadius.extraRound}
     ${theme.borderRadius.extraRound};
+  overflow-y: scroll;
+  overflow-x: hidden;
 `
