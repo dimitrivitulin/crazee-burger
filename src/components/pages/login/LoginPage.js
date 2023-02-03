@@ -27,7 +27,7 @@ const LoginPageStyled = styled.div`
     right: 0;
     bottom: 0;
     z-index: -1;
-    background: url("./images/F03-burger-background.jpg"), rgba(0, 0, 0, 0.7);
+    background: url("/images/F03-burger-background.jpg"), rgba(0, 0, 0, 0.7);
     background-position: center;
     background-size: cover;
     background-blend-mode: darken;
