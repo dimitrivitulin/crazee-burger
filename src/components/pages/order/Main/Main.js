@@ -14,8 +14,9 @@ const MainStyled = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
-  height: 100%;
-  width: 100%;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr;
   border-radius: 0px 0px ${theme.borderRadius.extraRound}
     ${theme.borderRadius.extraRound};
   overflow: scroll;
