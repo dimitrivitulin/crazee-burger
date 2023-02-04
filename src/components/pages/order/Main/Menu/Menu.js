@@ -18,7 +18,9 @@ const MenuStyled = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, 200px);
   grid-auto-rows: 330px;
-  gap: 85px;
-  padding: 50px;
+  column-gap: 85px;
+  row-gap: 60px;
+  padding: 50px 150px;
   justify-content: center;
+  overflow-y: hidden;
 `
