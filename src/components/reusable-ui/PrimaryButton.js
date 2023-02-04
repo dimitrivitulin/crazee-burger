@@ -21,7 +21,7 @@ const PrimaryButtonStyled = styled.button`
   display: flex;
   justify-content: center;
   line-height: 1rem;
-  font-weight: ${theme.weights.heavy};
+  font-weight: ${theme.fonts.weights.heavy};
   cursor: pointer;
   letter-spacing: 1px;
   &:focus,
