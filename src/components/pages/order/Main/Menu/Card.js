@@ -9,7 +9,7 @@ export default function Card({ burger }) {
       <h2>{burger.title}</h2>
       <div className="bottom-card">
         <h3>{burger.price}€</h3>
-        <PrimaryButton label={"Ajouter"} />
+        <PrimaryButton label={"Ajouter"} className={"card-btn"} />
       </div>
     </CardStyled>
   )
@@ -40,5 +40,12 @@ const CardStyled = styled.div`
   }
   .bottom-card {
     display: flex;
+    .card-btn {
+      width: 95px;
+      padding: 12px 0;
+      span {
+        font-size: 11px;
+      }
+    }
   }
 `
