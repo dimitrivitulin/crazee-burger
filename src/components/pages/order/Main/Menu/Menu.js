@@ -1,9 +1,10 @@
+import { useState } from "react"
 import styled from "styled-components"
 import { fakeMenu2 } from "../../../../../fakeData/fakeMenu"
 import { theme } from "../../../../../theme"
 import Card from "./Card"
 export default function Menu() {
-  const burgers = fakeMenu2
+  const [burgers, setBurgers] = useState(fakeMenu2)
   return (
     <MenuStyled>
       {burgers.map((burger) => (
@@ -24,5 +25,5 @@ const MenuStyled = styled.div`
   row-gap: 60px;
   padding: 50px 50px 150px;
   justify-content: center;
-  overflow-y: hidden;
+  overflow-y: scroll;
 `
