@@ -2,13 +2,13 @@ import { useState } from "react"
 import styled from "styled-components"
 import { fakeMenu2 } from "../../../../../fakeData/fakeMenu"
 import { theme } from "../../../../../theme"
-import Card from "./Card"
+import Burger from "./Burger"
 export default function Menu() {
   const [burgers, setBurgers] = useState(fakeMenu2)
   return (
     <MenuStyled>
       {burgers.map((burger) => (
-        <Card burger={burger} />
+        <Burger {...burger} />
       ))}
     </MenuStyled>
   )
@@ -25,5 +25,5 @@ const MenuStyled = styled.div`
   row-gap: 60px;
   padding: 50px 50px 150px;
   justify-content: center;
-  overflow-y: scroll;
+  overflow-y: scrollP;
 `

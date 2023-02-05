@@ -5,34 +5,40 @@ import {
   replaceFrenchCommaWithDot,
 } from "../../../../../utils/maths"
 
-import PrimaryButton from "./../../../../reusable-ui/PrimaryButton"
-export default function Card({ burger }) {
+import PrimaryButton from "../../../../reusable-ui/PrimaryButton"
+export default function Burger({ id, imageSource, title, price }) {
   return (
-    <CardStyled key={burger.id}>
-      <img src={burger.imageSource} alt={burger.title} />
+    <BurgerStyled key={id}>
+      <div className="image-card">
+        <img src={imageSource} alt={title} />
+      </div>
       <div className="info-card">
-        <h2>{burger.title}</h2>
-        <div className="bottom-info-card">
-          <h3>{formatPrice(replaceFrenchCommaWithDot(burger.price))}</h3>
+        <h2>{title}</h2>
+        <div className="info-text">
+          <h3>{formatPrice(replaceFrenchCommaWithDot(price))}</h3>
           <PrimaryButton label={"Ajouter"} className={"card-btn"} />
         </div>
       </div>
-    </CardStyled>
+    </BurgerStyled>
   )
 }
 
-const CardStyled = styled.div`
+const BurgerStyled = styled.div`
   background-color: ${theme.colors.white};
   padding: 50px 20px 10px 20px;
   border-radius: ${theme.borderRadius.extraRound};
   box-shadow: -8px 8px 20px 0px rgb(0 0 0 / 20%);
-  img {
+
+  .image-card {
     width: 200px;
     height: 145px;
-    object-fit: contain;
     padding-top: 15px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
   }
-
   .info-card {
     width: 200px;
     height: 110px;
@@ -49,7 +55,7 @@ const CardStyled = styled.div`
       white-space: nowrap;
       overflow: hidden;
     }
-    .bottom-info-card {
+    .info-text {
       flex-grow: 1;
       display: flex;
       justify-content: space-between;
