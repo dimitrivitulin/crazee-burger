@@ -1,29 +1,25 @@
 import styled from "styled-components"
 import { theme } from "../../../../../theme"
-import {
-  formatPrice,
-  replaceFrenchCommaWithDot,
-} from "../../../../../utils/maths"
 
 import PrimaryButton from "../../../../reusable-ui/PrimaryButton"
-export default function Burger({ id, imageSource, title, price }) {
+export default function Card({ id, imageSource, title, leftDescription }) {
   return (
-    <BurgerStyled key={id}>
+    <CardStyled key={id}>
       <div className="image-card">
         <img src={imageSource} alt={title} />
       </div>
       <div className="info-card">
         <h2>{title}</h2>
         <div className="info-text">
-          <h3>{formatPrice(replaceFrenchCommaWithDot(price))}</h3>
+          <h3>{leftDescription}</h3>
           <PrimaryButton label={"Ajouter"} className={"card-btn"} />
         </div>
       </div>
-    </BurgerStyled>
+    </CardStyled>
   )
 }
 
-const BurgerStyled = styled.div`
+const CardStyled = styled.div`
   background-color: ${theme.colors.white};
   padding: 50px ${theme.spacing.md} 10px ${theme.spacing.md};
   border-radius: ${theme.borderRadius.extraRound};
