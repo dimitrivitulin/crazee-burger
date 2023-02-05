@@ -1,7 +1,7 @@
 import styled from "styled-components"
-import { theme } from "../../../../../theme"
+import { theme } from "../../theme"
+import PrimaryButton from "./PrimaryButton"
 
-import PrimaryButton from "../../../../reusable-ui/PrimaryButton"
 export default function Card({ id, imageSource, title, leftDescription }) {
   return (
     <CardStyled key={id}>

@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { fakeMenu2 } from "../../../../../fakeData/fakeMenu"
 import { theme } from "../../../../../theme"
 import { formatPrice } from "../../../../../utils/maths"
-import Card from "./Card"
+import Card from "../../../../reusable-ui/Card"
 export default function Menu() {
   const [burgers, setBurgers] = useState(fakeMenu2)
   return (
