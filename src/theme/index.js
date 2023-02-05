@@ -58,7 +58,10 @@ const borderRadius = {
   circle: "50%",
 }
 
-const shadows = {}
+const shadows = {
+  inside: "inset 0px 8px 20px 8px rgba(0, 0, 0, 0.2)",
+  outside: "-8px 8px 20px 0px rgb(0 0 0 / 20%)",
+}
 
 export const theme = {
   colors,

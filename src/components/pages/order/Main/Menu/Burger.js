@@ -25,9 +25,9 @@ export default function Burger({ id, imageSource, title, price }) {
 
 const BurgerStyled = styled.div`
   background-color: ${theme.colors.white};
-  padding: 50px 20px 10px 20px;
+  padding: 50px ${theme.spacing.md} 10px ${theme.spacing.md};
   border-radius: ${theme.borderRadius.extraRound};
-  box-shadow: -8px 8px 20px 0px rgb(0 0 0 / 20%);
+  box-shadow: ${theme.shadows.outside};
 
   .image-card {
     width: 200px;
@@ -49,7 +49,7 @@ const BurgerStyled = styled.div`
       font-family: "Amatic SC";
       font-style: normal;
       font-weight: 700;
-      font-size: 36px;
+      font-size: ${theme.fonts.size.P4};
       line-height: 45px;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -69,10 +69,10 @@ const BurgerStyled = styled.div`
       }
       .card-btn {
         width: 50%;
-        padding: 12px 0;
+        padding: ${theme.spacing.sm} 0;
         span {
           font-family: Arial, Helvetica, sans-serif;
-          font-weight: 700;
+          font-weight: ${theme.fonts.weights.bold};
           font-size: 11px;
         }
       }

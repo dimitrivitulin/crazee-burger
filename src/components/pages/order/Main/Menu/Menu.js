@@ -17,7 +17,7 @@ export default function Menu() {
 const MenuStyled = styled.div`
   width: 100%;
   background-color: ${theme.colors.background_white};
-  box-shadow: inset 0px 8px 20px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: ${theme.shadows.inside};
   display: grid;
   grid-template-columns: repeat(auto-fill, 240px);
   grid-auto-rows: 330px;
@@ -25,5 +25,5 @@ const MenuStyled = styled.div`
   row-gap: 60px;
   padding: 50px 50px 150px;
   justify-content: center;
-  overflow-y: scrollP;
+  overflow-y: scroll;
 `
