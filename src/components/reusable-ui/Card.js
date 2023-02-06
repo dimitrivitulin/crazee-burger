@@ -21,17 +21,19 @@ export default function Card({ id, imageSource, title, leftDescription }) {
 
 const CardStyled = styled.div`
   background-color: ${theme.colors.white};
-  padding: 50px ${theme.spacing.md} 10px ${theme.spacing.md};
+  padding: ${theme.spacing.md} ${theme.spacing.md} 10px ${theme.spacing.md};
   border-radius: ${theme.borderRadius.extraRound};
   box-shadow: ${theme.shadows.outside};
 
   .image-card {
     width: 200px;
-    height: 145px;
-    padding-top: 15px;
+    height: 185px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     img {
       width: 100%;
-      height: 100%;
+      height: 145px;
       object-fit: contain;
     }
   }
@@ -65,7 +67,7 @@ const CardStyled = styled.div`
       }
       .card-btn {
         width: 50%;
-        padding: ${theme.spacing.sm} 0;
+        padding: ${theme.spacing.xs} 0;
         span {
           font-family: Arial, Helvetica, sans-serif;
           font-weight: ${theme.fonts.weights.bold};
