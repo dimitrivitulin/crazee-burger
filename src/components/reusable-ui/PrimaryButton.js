@@ -11,7 +11,8 @@ export default function PrimaryButton({ label, Icon, className }) {
 }
 
 const PrimaryButtonStyled = styled.button`
-  border: none;
+  outline: none;
+  border: 1px solid ${theme.colors.primary};
   border-radius: ${theme.borderRadius.round};
   background-color: ${theme.colors.primary};
   color: ${theme.colors.white};
@@ -21,12 +22,11 @@ const PrimaryButtonStyled = styled.button`
   line-height: 1rem;
   font-weight: ${theme.fonts.weights.heavy};
   cursor: pointer;
-  transition: 0.5s ease-out;
+  transition: 0.2s ease-out;
   &:active,
   &:hover {
     color: ${theme.colors.primary};
     background-color: ${theme.colors.white};
-    outline: 1px solid ${theme.colors.primary};
   }
   svg {
     height: 100%;

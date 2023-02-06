@@ -67,7 +67,7 @@ const CardStyled = styled.div`
       }
       .card-btn {
         width: 50%;
-        padding: ${theme.spacing.xs} 0;
+        padding: ${theme.spacing.sm} 0;
         span {
           font-family: Arial, Helvetica, sans-serif;
           font-weight: ${theme.fonts.weights.bold};
