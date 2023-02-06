@@ -21,8 +21,8 @@ const PrimaryButtonStyled = styled.button`
   line-height: 1rem;
   font-weight: ${theme.fonts.weights.heavy};
   cursor: pointer;
-  &:focus,
-  &:hover {
+  transition: background-color ease-out 0.5s;
+  &:active {
     color: ${theme.colors.primary};
     background-color: ${theme.colors.white};
     outline: 1px solid ${theme.colors.primary};
