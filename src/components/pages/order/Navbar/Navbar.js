@@ -1,7 +1,7 @@
 import styled from "styled-components"
-import { theme } from "../../../../../theme"
-import { refreshPage } from "../../../../../utils/window"
-import Logo from "../../../../reusable-ui/Logo"
+import { theme } from "../../../../theme"
+import { refreshPage } from "../../../../utils/window"
+import Logo from "../../../reusable-ui/Logo"
 import RightSide from "./RightSide/RightSide"
 
 export default function Navbar({ username }) {
@@ -22,6 +22,7 @@ const NavbarStyled = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid ${theme.colors.greyLight};
   .clicable {
     cursor: pointer;
   }

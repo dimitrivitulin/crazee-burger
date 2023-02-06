@@ -1,9 +1,9 @@
 import styled from "styled-components"
 import { theme } from "../../theme"
 
-export default function PrimaryButton({ label, Icon }) {
+export default function PrimaryButton({ label, Icon, className }) {
   return (
-    <PrimaryButtonStyled>
+    <PrimaryButtonStyled className={className}>
       <span>{label}</span>
       {Icon && Icon}
     </PrimaryButtonStyled>
@@ -11,9 +11,8 @@ export default function PrimaryButton({ label, Icon }) {
 }
 
 const PrimaryButtonStyled = styled.button`
-  width: 100%;
-  padding: ${theme.spacing.md};
-  border: none;
+  outline: none;
+  border: 1px solid ${theme.colors.primary};
   border-radius: ${theme.borderRadius.round};
   background-color: ${theme.colors.primary};
   color: ${theme.colors.white};
@@ -21,14 +20,13 @@ const PrimaryButtonStyled = styled.button`
   display: flex;
   justify-content: center;
   line-height: 1rem;
-  font-weight: ${theme.weights.heavy};
+  font-weight: ${theme.fonts.weights.heavy};
   cursor: pointer;
-  letter-spacing: 1px;
-  &:focus,
+  transition: 0.2s ease-out;
+  &:active,
   &:hover {
     color: ${theme.colors.primary};
     background-color: ${theme.colors.white};
-    outline: 1px solid ${theme.colors.primary};
   }
   svg {
     height: 100%;

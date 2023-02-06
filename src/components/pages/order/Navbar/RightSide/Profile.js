@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { theme } from "../../../../../../theme"
+import { theme } from "../../../../../theme"
 import { BsPersonCircle } from "react-icons/bs"
 import { Link } from "react-router-dom"
 
@@ -29,17 +29,17 @@ const ProfileStyled = styled.div`
     p {
       font-family: "Open Sans";
       color: ${theme.colors.greyBlue};
-      font-size: ${theme.fonts.P0};
+      font-size: ${theme.fonts.size.P0};
       line-height: 22px;
       text-align: end;
       span {
         color: ${theme.colors.primary};
-        font-weight: ${theme.weights.bold};
+        font-weight: ${theme.fonts.weights.bold};
       }
     }
     .disconnect {
       color: ${theme.colors.greyBlue};
-      font-size: ${theme.fonts.XXS};
+      font-size: ${theme.fonts.size.XXS};
       line-height: 14px;
       text-decoration: none;
       &:hover {
@@ -49,7 +49,7 @@ const ProfileStyled = styled.div`
   }
   .right-right-side {
     .icon {
-      font-size: ${theme.fonts.P4};
+      font-size: ${theme.fonts.size.P4};
       color: ${theme.colors.greyBlue};
     }
   }
