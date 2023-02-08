@@ -1,11 +1,11 @@
 import styled from "styled-components/macro"
-import { theme } from "../../../../../theme"
+import { theme } from "../../theme"
 
 export default function ToggleButton({
   isChecked,
   onToggle,
-  labelIfChecked = "DÉSACTIVER LE MODE ADMIN",
-  labelIfUnchecked = "ACTIVER LE MODE ADMIN",
+  labelIfChecked,
+  labelIfUnchecked,
 }) {
   return (
     <ToggleButtonStyled>

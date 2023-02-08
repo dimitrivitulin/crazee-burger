@@ -3,7 +3,7 @@ import { toast, ToastContainer } from "react-toastify"
 import styled from "styled-components"
 import Profile from "./Profile"
 import { theme } from "../../../../../theme"
-import ToggleButton from "./ToggleButton"
+import ToggleButton from "../../../../reusable-ui/ToggleButton"
 import { useState } from "react"
 
 export default function RightSide({ username }) {
@@ -26,7 +26,12 @@ export default function RightSide({ username }) {
   }
   return (
     <RightSideStyled>
-      <ToggleButton onToggle={onToggle} isChecked={isChecked} />
+      <ToggleButton
+        onToggle={onToggle}
+        isChecked={isChecked}
+        labelIfChecked="DÉSACTIVER LE MODE ADMIN"
+        labelIfUnchecked="ACTIVER LE MODE ADMIN"
+      />
       <ToastContainer className="toaster" bodyClassName="body-toast" />
       <Profile username={username} />
     </RightSideStyled>
