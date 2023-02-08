@@ -35,6 +35,7 @@ export default function RightSide({ username }) {
 
 const RightSideStyled = styled.div`
   display: flex;
+  padding-right: 50px;
   .toaster {
     max-width: 300px;
   }
