@@ -25,6 +25,7 @@ const ProfileStyled = styled.div`
   display: flex;
   align-items: flex-end;
   gap: 10px;
+  padding-left: 50px;
   .left-right-side {
     p {
       font-family: "Open Sans";

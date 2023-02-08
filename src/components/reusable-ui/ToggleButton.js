@@ -6,10 +6,9 @@ export default function ToggleButton({
   onToggle,
   labelIfChecked,
   labelIfUnchecked,
-  className,
 }) {
   return (
-    <ToggleButtonStyled className={className}>
+    <ToggleButtonStyled>
       <input
         type="checkbox"
         className="toggle"

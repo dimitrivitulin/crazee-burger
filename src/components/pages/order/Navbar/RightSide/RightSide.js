@@ -31,7 +31,6 @@ export default function RightSide({ username }) {
         isChecked={isChecked}
         labelIfChecked="DÉSACTIVER LE MODE ADMIN"
         labelIfUnchecked="ACTIVER LE MODE ADMIN"
-        className={"toggle-style"}
       />
       <ToastContainer className="toaster" bodyClassName="body-toast" />
       <Profile username={username} />
@@ -57,8 +56,5 @@ const RightSideStyled = styled.div`
     div {
       line-height: 1.3em;
     }
-  }
-  .toggle-style {
-    padding-right: 50px;
   }
 `
