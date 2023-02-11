@@ -5,7 +5,7 @@ import RightMainSide from "./RightMainSide/Menu/RightMainSide"
 export default function Main() {
   return (
     <MainStyled>
-      <div className="basket">basket</div>
+      {/* <div className="basket">basket</div> */}
       <RightMainSide />
     </MainStyled>
   )
@@ -17,13 +17,13 @@ const MainStyled = styled.div`
   }
   flex: 1;
   display: grid;
-  grid-template-columns: 25% 1fr;
-  /* grid-template-columns: 1fr; */
+  /* grid-template-columns: 25% 1fr; */
+  grid-template-columns: 1fr;
   border-radius: 0px 0px ${theme.borderRadius.extraRound}
     ${theme.borderRadius.extraRound};
   overflow: scroll;
   position: relative;
-  .basket {
+  /* .basket {
     background-color: violet;
-  }
+  } */
 `
