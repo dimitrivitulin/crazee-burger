@@ -1,9 +1,9 @@
 import { useState } from "react"
 import styled from "styled-components"
-import { fakeMenu2 } from "../../../../../fakeData/fakeMenu"
-import { theme } from "../../../../../theme"
-import { formatPrice } from "../../../../../utils/maths"
-import Card from "../../../../reusable-ui/Card"
+import { theme } from "../../../../../../theme"
+import { fakeMenu2 } from "./../../../../../../fakeData/fakeMenu"
+import Card from "./../../../../../reusable-ui/Card"
+import { formatPrice } from "./../../../../../../utils/maths"
 export default function Menu() {
   const [burgers, setBurgers] = useState(fakeMenu2)
   return (
@@ -22,6 +22,7 @@ export default function Menu() {
 
 const MenuStyled = styled.div`
   width: 100%;
+  flex-grow: 1;
   background-color: ${theme.colors.background_white};
   box-shadow: ${theme.shadows.inside};
   display: grid;
