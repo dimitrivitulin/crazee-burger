@@ -5,6 +5,7 @@ import Menu from "./Menu/Menu"
 export default function Main() {
   return (
     <MainStyled>
+      <div className="basket">basket</div>
       <Menu />
     </MainStyled>
   )
@@ -16,8 +17,11 @@ const MainStyled = styled.div`
   }
   flex: 1;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 25% 1fr;
   border-radius: 0px 0px ${theme.borderRadius.extraRound}
     ${theme.borderRadius.extraRound};
   overflow: scroll;
+  .basket {
+    background-color: violet;
+  }
 `
