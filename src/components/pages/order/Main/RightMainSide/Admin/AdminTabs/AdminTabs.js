@@ -3,8 +3,9 @@ import styled from "styled-components"
 import { FiChevronDown, FiChevronUp } from "react-icons/fi"
 import { AiOutlinePlus } from "react-icons/ai"
 import { MdModeEditOutline } from "react-icons/md"
-import { OrderContext } from "../../../../../../context/OrderContext"
-import { theme } from "../../../../../../theme"
+import { OrderContext } from "../../../../../../../context/OrderContext"
+import { theme } from "../../../../../../../theme"
+import Tab from "./Tab"
 
 export default function AdminTabs() {
   const {
@@ -27,56 +28,33 @@ export default function AdminTabs() {
 
   return (
     <AdminTabsStyled>
-      <button
+      <Tab
         onClick={() => setIsCollapsed(!isCollapsed)}
         className={!isCollapsed ? "" : "goblack"}
-      >
-        {isCollapsed ? <FiChevronDown /> : <FiChevronUp />}
-      </button>
-      <button
+        Icon=""
+        content={isCollapsed ? <FiChevronDown /> : <FiChevronUp />}
+      />
+      <Tab
         onClick={getSelectectedTab1}
         className={!isTabSelected1 ? "" : "goblack"}
-      >
-        <AiOutlinePlus /> <span>Ajouter un produit</span>
-      </button>
-      <button
+        Icon={<AiOutlinePlus />}
+        content={"Ajouter un produit"}
+      />
+      <Tab
         onClick={getSelectectedTab2}
         className={!isTabSelected2 ? "" : "goblack"}
-      >
-        <MdModeEditOutline /> <span>Modifier un produit</span>
-      </button>
+        Icon={<MdModeEditOutline />}
+        content={"Modifier un produit"}
+      />
     </AdminTabsStyled>
   )
 }
 const AdminTabsStyled = styled.div`
-  /* background-color: transparent; */
   padding-left: 70px;
   display: flex;
   gap: 1px;
   position: relative;
   top: 1px;
-  button {
-    line-height: 1;
-    padding: 12px 22px;
-    font-family: "Open Sans";
-    font-weight: 400;
-    font-size: ${theme.fonts.size.P0};
-    line-height: 22px;
-    background: ${theme.colors.white};
-    border: none;
-    border-bottom: 2px solid ${theme.colors.greyLight};
-    outline: none;
-    box-shadow: ${theme.shadows.outside};
-    border-radius: 5px 5px 0px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    :hover {
-      text-decoration: underline;
-      border-bottom: 2px solid ${theme.colors.white};
-    }
-  }
 
   .goblack {
     background-color: ${theme.colors.background_dark};
