@@ -3,7 +3,23 @@ import styled from "styled-components"
 import { OrderContext } from "../../../../../../context/OrderContext"
 
 export default function AdminTabs() {
-  const { isCollapsed, setIsCollapsed } = useContext(OrderContext)
+  const {
+    isCollapsed,
+    setIsCollapsed,
+    isTabSelected1,
+    setIsTabSelected1,
+    isTabSelected2,
+    setIsTabSelected2,
+  } = useContext(OrderContext)
+
+  const getSelectectedTab1 = () => {
+    setIsTabSelected2(false)
+    setIsTabSelected1(true)
+  }
+  const getSelectectedTab2 = () => {
+    setIsTabSelected1(false)
+    setIsTabSelected2(true)
+  }
 
   return (
     <AdminTabsStyled>
@@ -13,8 +29,18 @@ export default function AdminTabs() {
       >
         {isCollapsed ? "down" : "up"}
       </button>
-      <button>Add</button>
-      <button>Update</button>
+      <button
+        onClick={getSelectectedTab1}
+        className={!isTabSelected1 ? "" : "goblack"}
+      >
+        Add
+      </button>
+      <button
+        onClick={getSelectectedTab2}
+        className={!isTabSelected2 ? "" : "goblack"}
+      >
+        Update
+      </button>
     </AdminTabsStyled>
   )
 }
