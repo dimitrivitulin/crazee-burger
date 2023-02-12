@@ -9,7 +9,7 @@ export default function AdminTabs() {
     <AdminTabsStyled>
       <button
         onClick={() => setIsCollapsed(!isCollapsed)}
-        className={!isCollapsed ? "goblack" : ""}
+        className={!isCollapsed ? "" : "goblack"}
       >
         {isCollapsed ? "down" : "up"}
       </button>

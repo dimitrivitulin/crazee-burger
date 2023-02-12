@@ -4,7 +4,7 @@ import { createContext } from "react"
 export const OrderContext = createContext()
 export default function OrderContextProvider(props) {
   const [isAdmin, setIsAdmin] = useState(false)
-  const [isCollapsed, setIsCollapsed] = useState(true)
+  const [isCollapsed, setIsCollapsed] = useState(false)
   return (
     <OrderContext.Provider
       value={{ isAdmin, setIsAdmin, isCollapsed, setIsCollapsed }}
