@@ -4,17 +4,20 @@ import Main from "./Main/Main"
 import { useParams } from "react-router-dom"
 import { theme } from "../../../theme"
 import Navbar from "./Navbar/Navbar"
+import OrderContextProvider from "../../../context/OrderContext"
 
 export default function OrderPage() {
   const { username } = useParams()
 
   return (
-    <OrderPageStyled>
-      <div className="container">
-        <Navbar username={username} />
-        <Main />
-      </div>
-    </OrderPageStyled>
+    <OrderContextProvider>
+      <OrderPageStyled>
+        <div className="container">
+          <Navbar username={username} />
+          <Main />
+        </div>
+      </OrderPageStyled>
+    </OrderContextProvider>
   )
 }
 
