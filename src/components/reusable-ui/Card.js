@@ -23,7 +23,7 @@ const CardStyled = styled.div`
   background-color: ${theme.colors.white};
   padding: ${theme.spacing.md} ${theme.spacing.md} 10px ${theme.spacing.md};
   border-radius: ${theme.borderRadius.extraRound};
-  box-shadow: ${theme.shadows.outside};
+  box-shadow: ${theme.shadows.outsideXl};
 
   .image-card {
     width: 200px;

@@ -30,7 +30,7 @@ const ProfileStyled = styled.div`
     p {
       font-family: "Open Sans";
       color: ${theme.colors.greyBlue};
-      font-size: ${theme.fonts.size.P0};
+      font-size: ${theme.fonts.size.MD};
       line-height: 22px;
       text-align: end;
       span {

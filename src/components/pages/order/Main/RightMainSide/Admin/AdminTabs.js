@@ -4,6 +4,7 @@ import { FiChevronDown, FiChevronUp } from "react-icons/fi"
 import { AiOutlinePlus } from "react-icons/ai"
 import { MdModeEditOutline } from "react-icons/md"
 import { OrderContext } from "../../../../../../context/OrderContext"
+import { theme } from "../../../../../../theme"
 
 export default function AdminTabs() {
   const {
@@ -53,19 +54,19 @@ const AdminTabsStyled = styled.div`
   display: flex;
   gap: 1px;
   position: relative;
-  top: -1px;
+  top: 1px;
   button {
     line-height: 1;
     padding: 12px 22px;
     font-family: "Open Sans";
     font-weight: 400;
-    font-size: 16px;
+    font-size: ${theme.fonts.size.P0};
     line-height: 22px;
-    background: #ffffff;
+    background: ${theme.colors.white};
     border: none;
-    border-bottom: 2px solid #e4e5e9;
+    border-bottom: 2px solid ${theme.colors.greyLight};
     outline: none;
-    box-shadow: 0px -6px 8px -2px rgba(0, 0, 0, 0.1);
+    box-shadow: ${theme.shadows.outside};
     border-radius: 5px 5px 0px 0px;
     display: flex;
     justify-content: center;
@@ -73,16 +74,16 @@ const AdminTabsStyled = styled.div`
     gap: 15px;
     :hover {
       text-decoration: underline;
-      border-bottom: 2px solid #fff;
+      border-bottom: 2px solid ${theme.colors.white};
     }
   }
 
   .goblack {
-    background-color: #292729;
-    border-bottom: 2px solid #292729;
-    color: #fff;
+    background-color: ${theme.colors.background_dark};
+    border-bottom: 2px solid ${theme.colors.background_dark};
+    color: ${theme.colors.white};
     :hover {
-      border-bottom: 2px solid #292729;
+      border-bottom: 2px solid ${theme.colors.background_dark};
     }
   }
 `
