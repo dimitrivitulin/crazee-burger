@@ -1,11 +1,20 @@
-import React from "react"
+import { useContext } from "react"
 import styled from "styled-components"
+import { OrderContext } from "../../../../../../context/OrderContext"
 
 export default function AdminTabs() {
+  const { isCollapsed, setIsCollapsed } = useContext(OrderContext)
+
   return (
-    <AdminTabsStyled className="tabs">
-      <button>tab</button>
-      <button>tab</button>
+    <AdminTabsStyled>
+      <button
+        onClick={() => setIsCollapsed(!isCollapsed)}
+        className={isCollapsed ? "" : "goblack"}
+      >
+        {isCollapsed ? "down" : "up"}
+      </button>
+      <button>Add</button>
+      <button>Update</button>
     </AdminTabsStyled>
   )
 }
@@ -22,5 +31,9 @@ const AdminTabsStyled = styled.div`
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
+  }
+  .goblack {
+    background-color: #000;
+    color: #fff;
   }
 `
