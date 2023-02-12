@@ -1,12 +1,15 @@
+import { useContext } from "react"
 import styled from "styled-components"
+import { OrderContext } from "../../../../../../context/OrderContext"
 import AdminPanel from "./AdminPanel"
 import AdminTabs from "./AdminTabs"
 
 export default function Admin() {
+  const { isAdmin } = useContext(OrderContext)
   return (
     <AdminStyled>
       <AdminTabs />
-      <AdminPanel />
+      {isAdmin && <AdminPanel />}
     </AdminStyled>
   )
 }
