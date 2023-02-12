@@ -1,5 +1,8 @@
 import { useContext } from "react"
 import styled from "styled-components"
+import { FiChevronDown, FiChevronUp } from "react-icons/fi"
+import { AiOutlinePlus } from "react-icons/ai"
+import { MdModeEditOutline } from "react-icons/md"
 import { OrderContext } from "../../../../../../context/OrderContext"
 
 export default function AdminTabs() {
@@ -27,19 +30,19 @@ export default function AdminTabs() {
         onClick={() => setIsCollapsed(!isCollapsed)}
         className={!isCollapsed ? "" : "goblack"}
       >
-        {isCollapsed ? "down" : "up"}
+        {isCollapsed ? <FiChevronDown /> : <FiChevronUp />}
       </button>
       <button
         onClick={getSelectectedTab1}
         className={!isTabSelected1 ? "" : "goblack"}
       >
-        Add
+        <AiOutlinePlus /> <span>Ajouter un produit</span>
       </button>
       <button
         onClick={getSelectectedTab2}
         className={!isTabSelected2 ? "" : "goblack"}
       >
-        Update
+        <MdModeEditOutline /> <span>Modifier un produit</span>
       </button>
     </AdminTabsStyled>
   )
@@ -49,17 +52,37 @@ const AdminTabsStyled = styled.div`
   padding-left: 70px;
   display: flex;
   gap: 1px;
+  position: relative;
+  top: -1px;
   button {
     line-height: 1;
     padding: 12px 22px;
-    /* height: 43px; */
     font-family: "Open Sans";
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
+    background: #ffffff;
+    border: none;
+    border-bottom: 2px solid #e4e5e9;
+    outline: none;
+    box-shadow: 0px -6px 8px -2px rgba(0, 0, 0, 0.1);
+    border-radius: 5px 5px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    :hover {
+      text-decoration: underline;
+      border-bottom: 2px solid #fff;
+    }
   }
+
   .goblack {
-    background-color: #000;
+    background-color: #292729;
+    border-bottom: 2px solid #292729;
     color: #fff;
+    :hover {
+      border-bottom: 2px solid #292729;
+    }
   }
 `
