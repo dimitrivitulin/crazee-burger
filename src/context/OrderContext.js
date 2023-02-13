@@ -12,4 +12,7 @@ export const OrderContext = createContext({
 
   isTabSelected2: false,
   setIsTabSelected2: () => {},
+
+  currentTabSelected: false,
+  setCurrentTabSelected: () => {},
 })
