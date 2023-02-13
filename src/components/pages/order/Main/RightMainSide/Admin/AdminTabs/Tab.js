@@ -15,6 +15,7 @@ const TabStyled = styled.button`
   font-family: "Open Sans";
   font-weight: 400;
   font-size: ${theme.fonts.size.P0};
+  color: ${theme.colors.greySemiDark};
   line-height: 22px;
   background: ${theme.colors.white};
   border: none;
