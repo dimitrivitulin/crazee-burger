@@ -5,10 +5,7 @@ import AdminPanel from "./AdminPanel"
 import AdminTabs from "./AdminTabs/AdminTabs"
 
 export default function Admin() {
-  const { isAdmin, isCollapsed, setIsCollapsed } = useContext(OrderContext)
-  if (isAdmin) {
-    setIsCollapsed(!isCollapsed)
-  }
+  const { isCollapsed } = useContext(OrderContext)
 
   return (
     <AdminStyled>

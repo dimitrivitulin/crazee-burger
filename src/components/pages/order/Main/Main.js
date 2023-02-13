@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { theme } from "../../../../theme"
-import RightMainSide from "./RightMainSide/Menu/RightMainSide"
+import RightMainSide from "./RightMainSide/RightMainSide"
 
 export default function Main() {
   return (
