@@ -26,6 +26,7 @@ const TabStyled = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   :hover {
     text-decoration: underline;
     border-bottom: 2px solid ${theme.colors.white};

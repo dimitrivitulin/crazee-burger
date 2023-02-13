@@ -18,10 +18,12 @@ export default function AdminTabs() {
   } = useContext(OrderContext)
 
   const getSelectectedTab1 = () => {
+    setIsCollapsed(true)
     setIsTabSelected2(false)
     setIsTabSelected1(true)
   }
   const getSelectectedTab2 = () => {
+    setIsCollapsed(true)
     setIsTabSelected1(false)
     setIsTabSelected2(true)
   }
