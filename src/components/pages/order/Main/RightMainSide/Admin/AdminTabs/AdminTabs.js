@@ -29,9 +29,10 @@ export default function AdminTabs() {
         content=""
       />
 
-      {tabs.map((tab) => {
+      {tabs.map((tab, index) => {
         return (
           <Tab
+            key={index}
             content={tab.content}
             Icon={tab.Icon}
             onClick={() => selectedTab(tab.index)}

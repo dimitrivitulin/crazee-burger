@@ -10,6 +10,7 @@ export default function Menu() {
     <MenuStyled>
       {burgers.map(({ id, title, imageSource, price }) => (
         <Card
+          key={id}
           id={id}
           title={title}
           imageSource={imageSource}
