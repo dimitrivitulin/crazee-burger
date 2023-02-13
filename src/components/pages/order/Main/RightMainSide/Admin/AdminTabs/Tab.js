@@ -4,7 +4,8 @@ import { theme } from "../../../../../../../theme"
 export default function Tab({ onClick, className, Icon, content }) {
   return (
     <TabStyled onClick={onClick} className={className}>
-      <span>{content}</span>
+      {Icon}
+      {content ? <span>{content}</span> : ""}
     </TabStyled>
   )
 }
@@ -24,9 +25,11 @@ const TabStyled = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
   :hover {
     text-decoration: underline;
     border-bottom: 2px solid ${theme.colors.white};
+  }
+  span {
+    padding-left: 15px;
   }
 `

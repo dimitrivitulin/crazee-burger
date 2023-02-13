@@ -30,19 +30,19 @@ export default function AdminTabs() {
     <AdminTabsStyled>
       <Tab
         onClick={() => setIsCollapsed(!isCollapsed)}
-        className={!isCollapsed ? "" : "goblack"}
-        Icon=""
-        content={isCollapsed ? <FiChevronDown /> : <FiChevronUp />}
+        className={!isCollapsed ? "" : "is-active"}
+        Icon={isCollapsed ? <FiChevronDown /> : <FiChevronUp />}
+        content=""
       />
       <Tab
         onClick={getSelectectedTab1}
-        className={!isTabSelected1 ? "" : "goblack"}
+        className={!isTabSelected1 ? "" : "is-active"}
         Icon={<AiOutlinePlus />}
         content={"Ajouter un produit"}
       />
       <Tab
         onClick={getSelectectedTab2}
-        className={!isTabSelected2 ? "" : "goblack"}
+        className={!isTabSelected2 ? "" : "is-active"}
         Icon={<MdModeEditOutline />}
         content={"Modifier un produit"}
       />
@@ -56,7 +56,7 @@ const AdminTabsStyled = styled.div`
   position: relative;
   top: 1px;
 
-  .goblack {
+  .is-active {
     background-color: ${theme.colors.background_dark};
     border-bottom: 2px solid ${theme.colors.background_dark};
     color: ${theme.colors.white};
