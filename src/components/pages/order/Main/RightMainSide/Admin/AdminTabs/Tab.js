@@ -10,8 +10,7 @@ export default function Tab({ onClick, className, Icon, content }) {
   )
 }
 const TabStyled = styled.button`
-  line-height: 1;
-  padding: 12px 22px;
+  padding: 10px 22px;
   font-family: "Open Sans";
   font-weight: 400;
   font-size: ${theme.fonts.size.P0};
