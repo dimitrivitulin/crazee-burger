@@ -7,7 +7,7 @@ import ToastAdmin from "./ToastAdmin"
 import { useContext } from "react"
 import { OrderContext } from "../../../../../context/OrderContext"
 
-export default function RightSide({ username }) {
+export default function RightSide() {
   const { isAdmin, setIsAdmin } = useContext(OrderContext)
   const onToggle = () => {
     setIsAdmin(!isAdmin)
@@ -34,7 +34,7 @@ export default function RightSide({ username }) {
         labelIfUnchecked="ACTIVER LE MODE ADMIN"
       />
       <ToastAdmin />
-      <Profile username={username} />
+      <Profile />
     </RightSideStyled>
   )
 }
