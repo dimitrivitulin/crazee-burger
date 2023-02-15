@@ -7,7 +7,7 @@ import { useState } from "react"
 import { OrderContext } from "../../../context/OrderContext"
 
 export default function OrderPage() {
-  const [isAdmin, setIsAdmin] = useState(true)
+  const [isAdmin, setIsAdmin] = useState(false)
   const [isCollapsed, setIsCollapsed] = useState(false)
   const [currentTabSelected, setCurrentTabSelected] = useState("add")
 

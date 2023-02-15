@@ -24,7 +24,7 @@ export default function AdminTabs() {
     <AdminTabsStyled>
       <Tab
         onClick={() => setIsCollapsed(!isCollapsed)}
-        className={!isCollapsed ? "" : "is-active"}
+        className={!isCollapsed ? "is-active" : ""}
         Icon={isCollapsed ? <FiChevronDown /> : <FiChevronUp />}
         content=""
       />
