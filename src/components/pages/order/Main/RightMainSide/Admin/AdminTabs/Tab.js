@@ -1,11 +1,11 @@
 import styled from "styled-components"
 import { theme } from "../../../../../../../theme"
 
-export default function Tab({ onClick, className, Icon, content }) {
+export default function Tab({ onClick, className, Icon, text }) {
   return (
     <TabStyled onClick={onClick} className={className}>
       {Icon}
-      {content ? <span>{content}</span> : ""}
+      {text ? <span>{text}</span> : ""}
     </TabStyled>
   )
 }
