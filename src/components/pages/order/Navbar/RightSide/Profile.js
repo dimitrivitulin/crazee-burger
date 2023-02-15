@@ -31,7 +31,7 @@ const ProfileStyled = styled.div`
     p {
       font-family: "Open Sans";
       color: ${theme.colors.greyBlue};
-      font-size: ${theme.fonts.size.MD};
+      font-size: ${theme.fonts.size.S};
       line-height: 22px;
       text-align: end;
       span {
@@ -51,7 +51,7 @@ const ProfileStyled = styled.div`
   }
   .right-right-side {
     .icon {
-      font-size: ${theme.fonts.size.P4};
+      font-size: ${theme.fonts.size.XXXL};
       color: ${theme.colors.greyBlue};
     }
   }

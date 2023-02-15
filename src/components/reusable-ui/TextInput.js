@@ -19,7 +19,7 @@ const TextInputStyled = styled.div`
   background-color: ${theme.colors.white};
   border-radius: ${theme.borderRadius.round};
   .icon {
-    font-size: ${theme.fonts.size.MD};
+    font-size: ${theme.fonts.size.S};
     color: ${theme.colors.greySemiDark};
     margin-right: 8px;
   }

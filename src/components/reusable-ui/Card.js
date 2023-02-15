@@ -47,7 +47,7 @@ const CardStyled = styled.div`
       font-family: "Amatic SC";
       font-style: normal;
       font-weight: 700;
-      font-size: ${theme.fonts.size.P4};
+      font-size: ${theme.fonts.size.XXXL};
       line-height: 45px;
       text-overflow: ellipsis;
       white-space: nowrap;
