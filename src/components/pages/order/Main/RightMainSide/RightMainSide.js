@@ -6,6 +6,7 @@ import { OrderContext } from "../../../../../context/OrderContext"
 
 export default function RightMainSide() {
   const { isAdmin } = useContext(OrderContext)
+
   return (
     <RightMainSideStyled>
       <Menu />

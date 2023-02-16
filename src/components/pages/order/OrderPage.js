@@ -8,7 +8,7 @@ import { OrderContext } from "../../../context/OrderContext"
 
 export default function OrderPage() {
   const [isAdmin, setIsAdmin] = useState(false)
-  const [isCollapsed, setIsCollapsed] = useState(false)
+  const [isCollapsed, setIsCollapsed] = useState(true)
   const [currentTabSelected, setCurrentTabSelected] = useState("add")
 
   const OrderContextValue = {
