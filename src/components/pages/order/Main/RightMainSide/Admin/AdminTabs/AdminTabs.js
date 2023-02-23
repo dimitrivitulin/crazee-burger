@@ -46,7 +46,7 @@ const AdminTabsStyled = styled.div`
   display: flex;
   gap: 1px;
   position: absolute;
-  top: -41px;
+  top: -42px;
   left: 5%;
 
   .is-active {
