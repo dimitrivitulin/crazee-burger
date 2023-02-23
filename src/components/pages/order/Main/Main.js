@@ -1,11 +1,12 @@
 import styled from "styled-components"
 import { theme } from "../../../../theme"
-import Menu from "./Menu/Menu"
+import RightMainSide from "./RightMainSide/RightMainSide"
 
 export default function Main() {
   return (
     <MainStyled>
-      <Menu />
+      {/* <div className="basket">basket</div> */}
+      <RightMainSide />
     </MainStyled>
   )
 }
@@ -16,8 +17,13 @@ const MainStyled = styled.div`
   }
   flex: 1;
   display: grid;
+  /* grid-template-columns: 25% 1fr; */
   grid-template-columns: 1fr;
   border-radius: 0px 0px ${theme.borderRadius.extraRound}
     ${theme.borderRadius.extraRound};
   overflow: scroll;
+  position: relative;
+  /* .basket {
+    background-color: violet;
+  } */
 `

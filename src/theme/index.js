@@ -33,13 +33,14 @@ const fonts = {
     XXXS: "8px",
     XXS: "10px",
     XS: "12px",
-    P0: "15px",
-    P1: "18px",
-    P2: "20px",
-    P3: "24px",
-    P4: "36px",
-    P5: "48px",
-    P6: "60px",
+    S: "15px",
+    M: "16px",
+    L: "18px",
+    XL: "20px",
+    XXL: "24px",
+    XXXL: "36px",
+    XXXXL: "48px",
+    XXXXXL: "60px",
   },
   weights: {
     light: 300,
@@ -60,7 +61,8 @@ const borderRadius = {
 
 const shadows = {
   inside: "inset 0px 8px 20px 8px rgba(0, 0, 0, 0.2)",
-  outside: "-8px 8px 20px 0px rgb(0 0 0 / 20%)",
+  outsideXl: "-8px 8px 20px 0px rgb(0 0 0 / 20%)",
+  outside: "0px -6px 8px -2px rgba(0, 0, 0, 0.1)",
 }
 
 export const theme = {

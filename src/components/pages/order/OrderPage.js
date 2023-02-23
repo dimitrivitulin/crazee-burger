@@ -1,20 +1,34 @@
 import styled from "styled-components"
 import Main from "./Main/Main"
 
-import { useParams } from "react-router-dom"
 import { theme } from "../../../theme"
 import Navbar from "./Navbar/Navbar"
+import { useState } from "react"
+import { OrderContext } from "../../../context/OrderContext"
 
 export default function OrderPage() {
-  const { username } = useParams()
+  const [isAdmin, setIsAdmin] = useState(false)
+  const [isCollapsed, setIsCollapsed] = useState(true)
+  const [currentTabSelected, setCurrentTabSelected] = useState("add")
+
+  const OrderContextValue = {
+    isAdmin,
+    setIsAdmin,
+    isCollapsed,
+    setIsCollapsed,
+    currentTabSelected,
+    setCurrentTabSelected,
+  }
 
   return (
-    <OrderPageStyled>
-      <div className="container">
-        <Navbar username={username} />
-        <Main />
-      </div>
-    </OrderPageStyled>
+    <OrderContext.Provider value={OrderContextValue}>
+      <OrderPageStyled>
+        <div className="container">
+          <Navbar />
+          <Main />
+        </div>
+      </OrderPageStyled>
+    </OrderContext.Provider>
   )
 }
 

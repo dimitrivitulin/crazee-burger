@@ -51,23 +51,23 @@ const LoginFormStyled = styled.form`
   font-family: "Amatic SC", cursive;
 
   h1 {
-    font-size: ${theme.fonts.size.P5};
+    font-size: ${theme.fonts.size.XXXXL};
     margin: 30px 50px;
   }
   hr {
     width: 100%;
-    border: 1.5px solid ${theme.colors.LineLogin};
+    border: 1.5px solid ${theme.colors.loginLine};
     margin-bottom: ${theme.gridUnit * 5}px;
   }
   h2 {
     margin: 20px 10px 10px;
-    font-size: ${theme.fonts.size.P4};
+    font-size: ${theme.fonts.size.XXXL};
   }
   .icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: ${theme.fonts.size.P0};
+    font-size: ${theme.fonts.size.S};
     margin-left: 10px;
   }
   .login-btn {
