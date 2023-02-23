@@ -26,7 +26,6 @@ export default function AdminTabs() {
         onClick={() => setIsCollapsed(!isCollapsed)}
         className={!isCollapsed ? "is-active" : ""}
         Icon={isCollapsed ? <FiChevronDown /> : <FiChevronUp />}
-        content=""
       />
 
       {tabs.map((tab, index) => {
@@ -44,7 +43,6 @@ export default function AdminTabs() {
   )
 }
 const AdminTabsStyled = styled.div`
-  padding-left: 70px;
   display: flex;
   gap: 1px;
   position: absolute;
