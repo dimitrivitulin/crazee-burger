@@ -9,7 +9,7 @@ import PrimaryButton from "../../reusable-ui/PrimaryButton"
 
 export default function LoginForm() {
   // State
-  const [inputValue, setInputValue] = useState("")
+  const [inputValue, setInputValue] = useState("Dim")
   const navigate = useNavigate()
 
   // Comportement

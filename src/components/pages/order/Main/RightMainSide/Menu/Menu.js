@@ -1,11 +1,11 @@
 import { useState } from "react"
 import styled from "styled-components"
 import { theme } from "../../../../../../theme"
-import { fakeMenu2 } from "./../../../../../../fakeData/fakeMenu"
+import { fakeMenu } from "./../../../../../../fakeData/fakeMenu"
 import Card from "./../../../../../reusable-ui/Card"
 import { formatPrice } from "./../../../../../../utils/maths"
 export default function Menu() {
-  const [burgers, setBurgers] = useState(fakeMenu2)
+  const [burgers, setBurgers] = useState(fakeMenu.MEDIUM)
   return (
     <MenuStyled>
       {burgers.map(({ id, title, imageSource, price }) => (
