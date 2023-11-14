@@ -1,8 +1,8 @@
 import styled from "styled-components"
 import Menu from "./Menu/Menu"
-import Admin from "./Admin/Admin"
 import { useContext } from "react"
 import { OrderContext } from "../../../../../context/OrderContext"
+import Admin from "./Admin/Admin"
 
 export default function RightMainSide() {
   const { isAdmin } = useContext(OrderContext)
