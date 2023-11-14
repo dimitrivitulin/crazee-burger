@@ -5,11 +5,21 @@ import { theme } from "../../../theme"
 import Navbar from "./Navbar/Navbar"
 import { useState } from "react"
 import { OrderContext } from "../../../context/OrderContext"
+import { fakeMenu } from "../../../fakeData/fakeMenu"
 
 export default function OrderPage() {
   const [isAdmin, setIsAdmin] = useState(true)
   const [isCollapsed, setIsCollapsed] = useState(true)
   const [currentTabSelected, setCurrentTabSelected] = useState("add")
+  const [burgers, setBurgers] = useState(fakeMenu.MEDIUM)
+
+  const handleAdd = (newProduct) => {
+    const burgerCopy = [...burgers]
+
+    const burgerUpdated = [newProduct, ...burgerCopy]
+
+    setBurgers(burgerUpdated)
+  }
 
   const OrderContextValue = {
     isAdmin,
@@ -18,6 +28,9 @@ export default function OrderPage() {
     setIsCollapsed,
     currentTabSelected,
     setCurrentTabSelected,
+    handleAdd,
+    burgers,
+    setBurgers,
   }
 
   return (

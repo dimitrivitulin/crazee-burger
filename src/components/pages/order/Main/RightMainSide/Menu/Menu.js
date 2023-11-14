@@ -1,11 +1,12 @@
-import { useState } from "react"
 import styled from "styled-components"
 import { theme } from "../../../../../../theme"
-import { fakeMenu } from "./../../../../../../fakeData/fakeMenu"
 import Card from "./../../../../../reusable-ui/Card"
 import { formatPrice } from "./../../../../../../utils/maths"
+import { useContext } from "react"
+import { OrderContext } from "../../../../../../context/OrderContext"
 export default function Menu() {
-  const [burgers, setBurgers] = useState(fakeMenu.MEDIUM)
+  const { burgers } = useContext(OrderContext)
+
   return (
     <MenuStyled>
       {burgers.map(({ id, title, imageSource, price }) => (
