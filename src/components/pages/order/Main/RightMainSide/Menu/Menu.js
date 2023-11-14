@@ -16,7 +16,7 @@ export default function Menu() {
           key={id}
           id={id}
           title={title}
-          imageSource={imageSource === "" ? imageSource : DEFAULT_IMAGE}
+          imageSource={imageSource === "" ? DEFAULT_IMAGE : imageSource}
           leftDescription={formatPrice(price)}
         />
       ))}
