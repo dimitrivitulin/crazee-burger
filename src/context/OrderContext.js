@@ -12,4 +12,5 @@ export const OrderContext = createContext({
 
   burgers: () => {},
   handleAdd: () => {},
+  handleDelete: () => {},
 })

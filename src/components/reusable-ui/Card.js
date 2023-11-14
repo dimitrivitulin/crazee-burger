@@ -9,11 +9,16 @@ export default function Card({
   title,
   leftDescription,
   hasDeleteButton,
+  onDelete,
 }) {
   return (
     <CardStyled key={id}>
       {hasDeleteButton && (
-        <button className="delete-button" aria-label="delete-button">
+        <button
+          className="delete-button"
+          aria-label="delete-button"
+          onClick={onDelete}
+        >
           <TiDelete className="icon" />
         </button>
       )}
@@ -51,6 +56,9 @@ const CardStyled = styled.div`
     padding: 0;
     border: none;
     background: none;
+    &:hover {
+      color: #ff0000;
+    }
     .icon {
       width: 100%;
       height: 100%;

@@ -21,6 +21,16 @@ export default function OrderPage() {
     setBurgers(burgerUpdated)
   }
 
+  const handleDelete = (idOfProductToDelete) => {
+    alert("handleClickButton")
+    const burgersCopy = [...burgers]
+    const burgersUpdated = burgersCopy.filter(
+      (product) => product.id !== idOfProductToDelete
+    )
+    console.log("burgersUpdated", burgersUpdated)
+    setBurgers(burgersUpdated)
+  }
+
   const OrderContextValue = {
     isAdmin,
     setIsAdmin,
@@ -30,6 +40,7 @@ export default function OrderPage() {
     setCurrentTabSelected,
     handleAdd,
     burgers,
+    handleDelete,
   }
 
   return (
