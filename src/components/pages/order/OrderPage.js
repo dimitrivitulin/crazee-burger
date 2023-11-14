@@ -30,7 +30,6 @@ export default function OrderPage() {
     setCurrentTabSelected,
     handleAdd,
     burgers,
-    setBurgers,
   }
 
   return (

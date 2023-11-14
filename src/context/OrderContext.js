@@ -11,6 +11,5 @@ export const OrderContext = createContext({
   setCurrentTabSelected: () => {},
 
   burgers: () => {},
-  setBurgers: () => {},
   handleAdd: () => {},
 })
