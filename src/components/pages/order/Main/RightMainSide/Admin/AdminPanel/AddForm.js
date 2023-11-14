@@ -4,9 +4,9 @@ import { OrderContext } from "../../../../../../../context/OrderContext"
 
 const EMPTY_PRODUCT = {
   id: "",
-  title: "Nouveau Produit",
+  title: "",
   imageSource: "",
-  price: 14,
+  price: 0,
 }
 export default function AddForm() {
   const { handleAdd } = useContext(OrderContext)
