@@ -1,27 +1,61 @@
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
 import styled from "styled-components"
 import { OrderContext } from "../../../../../../../context/OrderContext"
 
+const EMPTY_PRODUCT = {
+  id: "",
+  title: "Nouveau Produit",
+  imageSource: "",
+  price: 14,
+}
 export default function AddForm() {
   const { handleAdd } = useContext(OrderContext)
-  const newProduct = {
-    id: new Date().getTime(),
-    title: "Nouveau produit",
-    imageSource:
-      "https://img.freepik.com/photos-premium/taco-qui-contient-du-boeuf_873925-20284.jpg?w=826",
-    price: 2.5,
-  }
+  const [newProduct, setNewProduct] = useState(EMPTY_PRODUCT)
+
   const handleSubmit = (event) => {
     event.preventDefault()
-    handleAdd(newProduct)
+
+    const newProductToAdd = {
+      ...newProduct,
+      id: new Date().getTime(),
+    }
+
+    handleAdd(newProductToAdd)
+  }
+
+  const handleChange = (event) => {
+    console.log("event.target", event.target)
+    const newValue = event.target.value
+    const name = event.target.name
+    setNewProduct({ ...newProduct, [name]: newValue })
   }
   return (
     <AddFormStyled onSubmit={handleSubmit}>
-      <ImagePreview>ImagePreview</ImagePreview>
+      <ImagePreview>Aucune Image</ImagePreview>
       <InputFields>
-        <input type="text" placeholder="Nom" />
-        <input type="text" placeholder="Image URL" />
-        <input type="text" placeholder="Prix" />
+        <input
+          name="title"
+          value={newProduct.title}
+          type="text"
+          placeholder="Nom"
+          onChange={handleChange}
+        />
+
+        <input
+          name="imageSource"
+          value={newProduct.imageSource}
+          type="text"
+          placeholder="Image URL"
+          onChange={handleChange}
+        />
+
+        <input
+          name="price"
+          value={newProduct.price ? newProduct.price : ""}
+          type="text"
+          placeholder="Prix"
+          onChange={handleChange}
+        />
       </InputFields>
       <SubmitButton>
         <button>Envoyer</button>
