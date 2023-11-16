@@ -5,7 +5,7 @@ export default function PrimaryButton({ label, Icon, className }) {
   return (
     <PrimaryButtonStyled className={className}>
       <span>{label}</span>
-      {Icon && Icon}
+      <div className="icon">{Icon && Icon}</div>
     </PrimaryButtonStyled>
   )
 }
@@ -28,9 +28,11 @@ const PrimaryButtonStyled = styled.button`
     color: ${theme.colors.primary};
     background-color: ${theme.colors.white};
   }
-  svg {
-    height: 100%;
-    line-height: 1rem;
-    margin-left: 0.2rem;
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: ${theme.fonts.size.S};
+    margin-left: 10px;
   }
 `
