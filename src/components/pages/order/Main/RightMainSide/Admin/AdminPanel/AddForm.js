@@ -8,6 +8,7 @@ import { MdOutlineEuro } from "react-icons/md"
 
 import { theme } from "./../../../../../../../theme/index"
 import TextInput from "../../../../../../reusable-ui/TextInput"
+import Button from "../../../../../../reusable-ui/Button"
 const EMPTY_PRODUCT = {
   id: "",
   title: "",
@@ -85,9 +86,12 @@ export default function AddForm() {
         />
       </InputFields>
       <SubmitButton>
-        <button className="submit-button">
-          Ajouter un nouveau produit au menu
-        </button>
+        <Button
+          className="submit-button"
+          version="success"
+          label={"Ajouter un nouveaux produit au menu"}
+        />
+
         {isSubmited && (
           <div className="submit-message">
             <FiCheck />
@@ -136,7 +140,6 @@ const InputFields = styled.div`
   grid-row-gap: 8px;
 `
 const SubmitButton = styled.div`
-  background-color: green;
   grid-area: 4 / -2 / -1 / -1;
   display: flex;
   .submit-button {

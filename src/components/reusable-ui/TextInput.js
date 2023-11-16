@@ -6,7 +6,7 @@ export default function TextInput({
   onChange,
   Icon,
   className,
-  version,
+  version = "normal",
   ...extraProps
 }) {
   return (
@@ -23,7 +23,7 @@ const TextInputStyled = styled.div`
   align-items: center;
 
   .icon {
-    font-size: ${theme.fonts.size.SM};
+    font-size: ${theme.fonts.size.S};
     margin: 0 13px 0 8px;
     display: flex;
   }
@@ -39,7 +39,7 @@ const TextInputStyled = styled.div`
   }
 
   /* ${(props) => props.version === "normal" && extraNormal};
-  ${(props) => props.version === "minimaliste" && extratMinimalist}; */
+  ${(props) => props.version === "minimalist" && extraMinimalist}; */
 
   ${({ version }) => extraStyle[version]}
 `
@@ -58,7 +58,7 @@ const extraNormal = css`
   }
 `
 
-const extratMinimalist = css`
+const extraMinimalist = css`
   background-color: ${theme.colors.background_white};
   padding: 8px 16px;
   color: ${theme.colors.greyBlue};
@@ -75,5 +75,5 @@ const extratMinimalist = css`
 
 const extraStyle = {
   normal: extraNormal,
-  minimalist: extratMinimalist,
+  minimalist: extraMinimalist,
 }
