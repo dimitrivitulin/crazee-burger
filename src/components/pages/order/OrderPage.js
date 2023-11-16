@@ -9,7 +9,7 @@ import { fakeMenu } from "../../../fakeData/fakeMenu"
 import { EMPTY_PRODUCT } from "./Main/RightMainSide/Admin/AdminPanel/AddForm"
 
 export default function OrderPage() {
-  const [isAdmin, setIsAdmin] = useState(true)
+  const [isAdmin, setIsAdmin] = useState(false)
   const [isCollapsed, setIsCollapsed] = useState(true)
   const [currentTabSelected, setCurrentTabSelected] = useState("add")
   const [burgers, setBurgers] = useState(fakeMenu.MEDIUM)
