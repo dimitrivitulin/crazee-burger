@@ -5,11 +5,34 @@ import { theme } from "../../../theme"
 import Navbar from "./Navbar/Navbar"
 import { useState } from "react"
 import { OrderContext } from "../../../context/OrderContext"
+import { fakeMenu } from "../../../fakeData/fakeMenu"
+import { EMPTY_PRODUCT } from "./Main/RightMainSide/Admin/AdminPanel/AddForm"
 
 export default function OrderPage() {
   const [isAdmin, setIsAdmin] = useState(false)
   const [isCollapsed, setIsCollapsed] = useState(true)
   const [currentTabSelected, setCurrentTabSelected] = useState("add")
+  const [burgers, setBurgers] = useState(fakeMenu.MEDIUM)
+  const [newProduct, setNewProduct] = useState(EMPTY_PRODUCT)
+
+  const handleAdd = (newProduct) => {
+    const burgerCopy = [...burgers]
+
+    const burgerUpdated = [newProduct, ...burgerCopy]
+
+    setBurgers(burgerUpdated)
+  }
+  const resetBurgers = () => {
+    setBurgers(fakeMenu.MEDIUM)
+  }
+  const handleDelete = (idOfProductToDelete) => {
+    const burgersCopy = [...burgers]
+    const burgersUpdated = burgersCopy.filter(
+      (product) => product.id !== idOfProductToDelete
+    )
+    console.log("burgersUpdated", burgersUpdated)
+    setBurgers(burgersUpdated)
+  }
 
   const OrderContextValue = {
     isAdmin,
@@ -18,6 +41,12 @@ export default function OrderPage() {
     setIsCollapsed,
     currentTabSelected,
     setCurrentTabSelected,
+    handleAdd,
+    burgers,
+    resetBurgers,
+    handleDelete,
+    newProduct,
+    setNewProduct,
   }
 
   return (

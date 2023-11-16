@@ -1,11 +1,23 @@
-import { useState } from "react"
 import styled from "styled-components"
 import { theme } from "../../../../../../theme"
-import { fakeMenu2 } from "./../../../../../../fakeData/fakeMenu"
 import Card from "./../../../../../reusable-ui/Card"
 import { formatPrice } from "./../../../../../../utils/maths"
+import { useContext } from "react"
+import { OrderContext } from "../../../../../../context/OrderContext"
+import EmptyMenuAdmin from "./EmptyMenuAdmin.js"
+import EmptyMenuClient from "./EmptyMenuClient.js"
+
+const DEFAULT_IMAGE = "/images/coming-soon.png"
+
 export default function Menu() {
-  const [burgers, setBurgers] = useState(fakeMenu2)
+  const { burgers, resetBurgers, isAdmin, handleDelete } =
+    useContext(OrderContext)
+
+  if (burgers.length === 0) {
+    if (!isAdmin) return <EmptyMenuClient />
+    return <EmptyMenuAdmin resetBurgers={resetBurgers} />
+  }
+
   return (
     <MenuStyled>
       {burgers.map(({ id, title, imageSource, price }) => (
@@ -13,8 +25,10 @@ export default function Menu() {
           key={id}
           id={id}
           title={title}
-          imageSource={imageSource}
+          imageSource={imageSource === "" ? DEFAULT_IMAGE : imageSource}
           leftDescription={formatPrice(price)}
+          hasDeleteButton={isAdmin}
+          onDelete={() => handleDelete(id)}
         />
       ))}
     </MenuStyled>
@@ -24,8 +38,6 @@ export default function Menu() {
 const MenuStyled = styled.div`
   width: 100%;
   flex-grow: 1;
-  background-color: ${theme.colors.background_white};
-  box-shadow: ${theme.shadows.inside};
   display: grid;
   grid-template-columns: repeat(auto-fill, 240px);
   grid-auto-rows: 330px;
