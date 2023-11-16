@@ -6,9 +6,10 @@ export default function Button({
   Icon,
   className,
   version = "success",
+  onClick,
 }) {
   return (
-    <ButtonStyled className={className} version={version}>
+    <ButtonStyled className={className} version={version} onClick={onClick}>
       <span>{label}</span>
       <div className="icon">{Icon && Icon}</div>
     </ButtonStyled>
