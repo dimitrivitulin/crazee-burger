@@ -4,14 +4,14 @@ import { theme } from "../../theme"
 export default function TextInput({
   value,
   onChange,
-  Icon,
+  icon,
   className,
   version = "normal",
   ...extraProps
 }) {
   return (
     <TextInputStyled className={className} version={version}>
-      <div className="icon">{Icon && Icon}</div>
+      {icon && <div className="icon">{icon}</div>}
       <input value={value} onChange={onChange} {...extraProps} type="text" />
     </TextInputStyled>
   )
