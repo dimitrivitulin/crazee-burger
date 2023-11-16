@@ -13,9 +13,10 @@ export default function Menu() {
   const { burgers, resetBurgers, isAdmin, handleDelete } =
     useContext(OrderContext)
 
-  if (burgers.length === 0)
+  if (burgers.length === 0) {
+    if (!isAdmin) return <EmptyMenuClient />
     return <EmptyMenuAdmin resetBurgers={resetBurgers} />
-  if (!isAdmin) return <EmptyMenuClient />
+  }
 
   return (
     <MenuStyled>
