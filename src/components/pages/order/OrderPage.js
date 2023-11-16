@@ -6,12 +6,14 @@ import Navbar from "./Navbar/Navbar"
 import { useState } from "react"
 import { OrderContext } from "../../../context/OrderContext"
 import { fakeMenu } from "../../../fakeData/fakeMenu"
+import { EMPTY_PRODUCT } from "./Main/RightMainSide/Admin/AdminPanel/AddForm"
 
 export default function OrderPage() {
   const [isAdmin, setIsAdmin] = useState(true)
   const [isCollapsed, setIsCollapsed] = useState(true)
   const [currentTabSelected, setCurrentTabSelected] = useState("add")
   const [burgers, setBurgers] = useState(fakeMenu.MEDIUM)
+  const [newProduct, setNewProduct] = useState(EMPTY_PRODUCT)
 
   const handleAdd = (newProduct) => {
     const burgerCopy = [...burgers]
@@ -43,6 +45,8 @@ export default function OrderPage() {
     burgers,
     resetBurgers,
     handleDelete,
+    newProduct,
+    setNewProduct,
   }
 
   return (

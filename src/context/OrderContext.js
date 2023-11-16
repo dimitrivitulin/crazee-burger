@@ -14,4 +14,7 @@ export const OrderContext = createContext({
   resetBurgers: () => {},
   handleAdd: () => {},
   handleDelete: () => {},
+
+  newProduct: [],
+  setNewProduct: () => {},
 })
