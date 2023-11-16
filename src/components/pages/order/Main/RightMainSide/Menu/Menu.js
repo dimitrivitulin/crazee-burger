@@ -4,19 +4,18 @@ import Card from "./../../../../../reusable-ui/Card"
 import { formatPrice } from "./../../../../../../utils/maths"
 import { useContext } from "react"
 import { OrderContext } from "../../../../../../context/OrderContext"
+import EmptyMenuAdmin from "./EmptyMenuAdmin.js"
+import EmptyMenuClient from "./EmptyMenuClient.js"
 
 const DEFAULT_IMAGE = "/images/coming-soon.png"
+
 export default function Menu() {
   const { burgers, resetBurgers, isAdmin, handleDelete } =
     useContext(OrderContext)
 
   if (burgers.length === 0)
-    return (
-      <div>
-        <span>Pas de produit</span>
-        <button onClick={resetBurgers}>Générer de nouveaux produits</button>
-      </div>
-    )
+    return <EmptyMenuAdmin resetBurgers={resetBurgers} />
+  if (!isAdmin) return <EmptyMenuClient />
 
   return (
     <MenuStyled>

@@ -11,7 +11,7 @@ export default function OrderPage() {
   const [isAdmin, setIsAdmin] = useState(true)
   const [isCollapsed, setIsCollapsed] = useState(false)
   const [currentTabSelected, setCurrentTabSelected] = useState("add")
-  const [burgers, setBurgers] = useState(fakeMenu.MEDIUM)
+  const [burgers, setBurgers] = useState(fakeMenu.SMALL)
 
   const handleAdd = (newProduct) => {
     const burgerCopy = [...burgers]
@@ -21,7 +21,7 @@ export default function OrderPage() {
     setBurgers(burgerUpdated)
   }
   const resetBurgers = () => {
-    setBurgers(fakeMenu.MEDIUM)
+    setBurgers(fakeMenu.SMALL)
   }
   const handleDelete = (idOfProductToDelete) => {
     alert("handleClickButton")
