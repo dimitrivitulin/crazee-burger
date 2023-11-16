@@ -10,7 +10,8 @@ export const OrderContext = createContext({
   currentTabSelected: false,
   setCurrentTabSelected: () => {},
 
-  burgers: () => {},
+  burgers: [],
+  resetBurgers: () => {},
   handleAdd: () => {},
   handleDelete: () => {},
 })

@@ -7,7 +7,16 @@ import { OrderContext } from "../../../../../../context/OrderContext"
 
 const DEFAULT_IMAGE = "/images/coming-soon.png"
 export default function Menu() {
-  const { burgers, isAdmin, handleDelete } = useContext(OrderContext)
+  const { burgers, resetBurgers, isAdmin, handleDelete } =
+    useContext(OrderContext)
+
+  if (burgers.length === 0)
+    return (
+      <div>
+        <span>Pas de produit</span>
+        <button onClick={resetBurgers}>Générer de nouveaux produits</button>
+      </div>
+    )
 
   return (
     <MenuStyled>
@@ -29,8 +38,6 @@ export default function Menu() {
 const MenuStyled = styled.div`
   width: 100%;
   flex-grow: 1;
-  background-color: ${theme.colors.background_white};
-  box-shadow: ${theme.shadows.inside};
   display: grid;
   grid-template-columns: repeat(auto-fill, 240px);
   grid-auto-rows: 330px;
