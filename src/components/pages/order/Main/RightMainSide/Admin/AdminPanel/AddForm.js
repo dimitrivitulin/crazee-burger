@@ -2,7 +2,12 @@ import React, { useContext, useState } from "react"
 import styled from "styled-components"
 import { OrderContext } from "../../../../../../../context/OrderContext"
 import { FiCheck } from "react-icons/fi"
+import { FaHamburger } from "react-icons/fa"
+import { BsFillCameraFill } from "react-icons/bs"
+import { MdOutlineEuro } from "react-icons/md"
+
 import { theme } from "./../../../../../../../theme/index"
+import TextInput from "../../../../../../reusable-ui/TextInput"
 const EMPTY_PRODUCT = {
   id: "",
   title: "",
@@ -49,28 +54,34 @@ export default function AddForm() {
         )}
       </ImagePreview>
       <InputFields>
-        <input
+        <TextInput
           name="title"
           value={newProduct.title}
           type="text"
           placeholder="Nom du produit (ex: Super Burger)"
           onChange={handleChange}
+          Icon={<FaHamburger />}
+          version="minimalist"
         />
 
-        <input
+        <TextInput
           name="imageSource"
           value={newProduct.imageSource}
           type="text"
           placeholder="Lien URL d'une image (ex: https://la-photo-de-mon-produit.png)"
           onChange={handleChange}
+          Icon={<BsFillCameraFill />}
+          version="minimalist"
         />
 
-        <input
+        <TextInput
           name="price"
           value={newProduct.price ? newProduct.price : ""}
           type="text"
           placeholder="Prix"
           onChange={handleChange}
+          Icon={<MdOutlineEuro />}
+          version="minimalist"
         />
       </InputFields>
       <SubmitButton>
@@ -120,9 +131,9 @@ const ImagePreview = styled.div`
   }
 `
 const InputFields = styled.div`
-  background-color: red;
   grid-area: 1 / 2 / -2 / 3;
   display: grid;
+  grid-row-gap: 8px;
 `
 const SubmitButton = styled.div`
   background-color: green;

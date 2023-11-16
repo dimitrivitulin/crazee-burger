@@ -32,6 +32,7 @@ export default function LoginForm() {
         placeholder={"Entrez votre prénom"}
         required
         className="input-login"
+        version="normale"
       />
       <PrimaryButton
         label={"Accéder à mon espace"}
