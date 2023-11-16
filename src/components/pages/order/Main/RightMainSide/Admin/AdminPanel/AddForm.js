@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react"
 import styled from "styled-components"
 import { OrderContext } from "../../../../../../../context/OrderContext"
 import { FiCheck } from "react-icons/fi"
+import { theme } from "./../../../../../../../theme/index"
 const EMPTY_PRODUCT = {
   id: "",
   title: "",
@@ -44,7 +45,7 @@ export default function AddForm() {
         {newProduct.imageSource ? (
           <img src={newProduct.imageSource} alt={newProduct.title} />
         ) : (
-          <div>Aucune Image</div>
+          <div className="empty-image">Aucune Image</div>
         )}
       </ImagePreview>
       <InputFields>
@@ -73,7 +74,9 @@ export default function AddForm() {
         />
       </InputFields>
       <SubmitButton>
-        <button className="submit-button">Ajouter un nouveau produit au menu</button>
+        <button className="submit-button">
+          Ajouter un nouveau produit au menu
+        </button>
         {isSubmited && (
           <div className="submit-message">
             <FiCheck />
@@ -85,15 +88,15 @@ export default function AddForm() {
   )
 }
 const AddFormStyled = styled.form`
-  border: 1px solid black;
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: repeat(4, 1fr);
   height: 100%;
   width: 70%;
+  grid-column-gap: 20px;
+  grid-row-gap: 8px;
 `
 const ImagePreview = styled.div`
-  background-color: blue;
   grid-area: 1 / 1 / 4 /2;
   display: flex;
   align-content: center;
@@ -103,6 +106,17 @@ const ImagePreview = styled.div`
     height: 100%;
     object-fit: contain;
     object-position: center;
+  }
+  .empty-image {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid ${theme.colors.greyLight};
+    line-height: 1.5;
+    color: ${theme.colors.greySemiDark};
+    border-radius: ${theme.borderRadius.round};
   }
 `
 const InputFields = styled.div`
